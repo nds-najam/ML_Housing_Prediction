@@ -33,4 +33,22 @@ git push origin main (Send changes to github)
 git remote -v (To check remote url)
 git branch (to check current branch)
 ```
+Git commands available at
+```
+https://git-scm.com/docs/git
+```
+To setup CI/CD pipeline in heroku we need 3 points of information
+
+1. HEROKU_EMAIL = "najam.iitm@gmail.com"
+2. HEROKU_API_KEY = "2195fa6e-6440-495b-aa2a-5762d375ddd1"
+3. HEROKU_APP_NAME = "nds-ml-regression-app"
+
+Docker Commands
+```
+docker build -t <image_name>:<tagname> . # (Builds Docker Image, image name for docker should be lowercase)
+docker images # (To list docker image)
+docker run -p 5000:5000 -e PORT=5000 f8c749e73678 # (run docker image)
+docker ps # to check running container in docker
+docker stop <container_id> # to stop docker container
+```
 
