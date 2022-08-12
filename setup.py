@@ -3,7 +3,7 @@ from typing import List
 
 # Declaring variables for setup functions
 PROJECT_NAME = "housing-predictor"
-VERSION = "0.0.3"
+VERSION = "0.0.4"
 AUTHOR = "Najam Sheikh"
 DESCRIPTION = "This is my first FSDS Nov ML Project"
 PACKAGES = ["housing"]
