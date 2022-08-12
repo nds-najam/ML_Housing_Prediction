@@ -18,5 +18,19 @@ Creating conda environment
 conda create -p venv python==3.7 -y
 conda activate venv/ or conda activate venv
 ```
+Install all libraries
 ```
 pip install -r requirements.txt
+```
+Git commands
+```
+git add . (all files)
+git add <filename> (for adding one file)
+git status (to check current status)
+git log (to see all the logs)
+git commit -m "message" (Commiting the changes)
+git push origin main (Send changes to github)
+git remote -v (To check remote url)
+git branch (to check current branch)
+
+
