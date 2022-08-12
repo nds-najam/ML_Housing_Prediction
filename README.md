@@ -51,4 +51,5 @@ docker run -p 5000:5000 -e PORT=5000 f8c749e73678 # (run docker image)
 docker ps # to check running container in docker
 docker stop <container_id> # to stop docker container
 ```
+Git actions available at https://docs.github.com/en/actions
 
