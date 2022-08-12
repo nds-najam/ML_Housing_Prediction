@@ -53,3 +53,6 @@ docker stop <container_id> # to stop docker container
 ```
 Git actions available at https://docs.github.com/en/actions
 
+```
+python setup.py install
+```
