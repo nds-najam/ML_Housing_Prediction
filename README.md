@@ -39,9 +39,9 @@ https://git-scm.com/docs/git
 ```
 To setup CI/CD pipeline in heroku we need 3 points of information
 
-1. HEROKU_EMAIL = "najam.iitm@gmail.com"
-2. HEROKU_API_KEY = "2195fa6e-6440-495b-aa2a-5762d375ddd1"
-3. HEROKU_APP_NAME = "nds-ml-regression-app"
+1. HEROKU_EMAIL = <>
+2. HEROKU_API_KEY = <>
+3. HEROKU_APP_NAME = <>
 
 Docker Commands
 ```
