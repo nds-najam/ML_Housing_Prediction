@@ -15,7 +15,7 @@ Application url:
 
 Creating conda environment
 ```
-conda create -p venv python==3.7 -y
+conda create -p venv python==3.8 -y
 conda activate venv/ or conda activate venv
 ```
 Install all libraries
