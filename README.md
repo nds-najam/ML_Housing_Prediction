@@ -32,5 +32,5 @@ git commit -m "message" (Commiting the changes)
 git push origin main (Send changes to github)
 git remote -v (To check remote url)
 git branch (to check current branch)
-
+```
 
