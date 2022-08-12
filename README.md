@@ -1,4 +1,4 @@
-# ML_Project_1
+# ML_Housing_Prediction
 Application url:
 [HousingPredictor](https://ml-regression-app.herokuapp.com/)
 
