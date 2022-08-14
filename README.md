@@ -56,3 +56,11 @@ Git actions available at https://docs.github.com/en/actions
 ```
 python setup.py install
 ```
+Install ipykernal
+```
+pip install ipykernal
+```
+Install yaml library
+```
+pip install PyYAML
+```

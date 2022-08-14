@@ -14,7 +14,11 @@ def get_requirements_list()->List[str]:
     This function returns a list of libraries in requirements.txt
     '''
     with open(REQUIREMENT_FILE_NAME) as requirement_file:
-        return requirement_file.readlines().remove("-e .")
+        requirement_list = requirement_file.readlines()
+        requirement_list = [requirement_name.replace("\n", "") for requirement_name in requirement_list]
+        if "-e ." in requirement_list:
+            requirement_list.remove("-e .")
+        return requirement_list
 
 setup(
 name = PROJECT_NAME,
