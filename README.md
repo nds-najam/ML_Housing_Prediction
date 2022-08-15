@@ -64,3 +64,7 @@ Install yaml library
 ```
 pip install PyYAML
 ```
+To avoid SSL Certificate Errors
+```
+pip install --upgrade certifi
+```

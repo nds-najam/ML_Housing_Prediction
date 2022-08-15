@@ -4,10 +4,13 @@ from housing.exception import HousingException
 from housing.logger import logging
 from housing.entity.artefact_entity import DataIngestionArtefact
 import tarfile
-from six.moves import urllib
+import urllib.request
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import StratifiedShuffleSplit
+
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 
 class DataIngestion:
 
@@ -35,7 +38,7 @@ class DataIngestion:
             tgz_file_path = os.path.join(tgz_download_dir,housing_file_name)
 
             logging.info(f'Downloading file from: [{download_url}] into :[{tgz_file_path}]')
-            urllib.request.urlretrieve(download_url,tgz_file_path)
+            tgz_file_path, headers = urllib.request.urlretrieve(download_url)
             logging.info(f'File:[{tgz_file_path}] has been downloaded successfully')
             return tgz_file_path
 
@@ -73,6 +76,7 @@ class DataIngestion:
 
             )
 
+            logging.info(f"Splitting data into train and test")
             strat_train_set = None
             strat_test_set = None
 
@@ -98,9 +102,11 @@ class DataIngestion:
 
             data_ingestion_artefact = DataIngestionArtefact(train_file_path=train_file_path,
                                                             test_file_path=test_file_path,
+                                                            is_ingested=True,
                                                             message = f'Data ingestion completed successfully'
                                                             )
             
+            logging.info(f"Data Ingestion artefact:[{data_ingestion_artefact}]")
             return data_ingestion_artefact
 
         except Exception as e:
@@ -114,7 +120,7 @@ class DataIngestion:
             tgz_file_path = self.download_housing_data()
 
             self.extract_tgz_file(tgz_file_path=tgz_file_path)
-            return self.split_data_as_train_test
+            return self.split_data_as_train_test()
         except Exception as e:
             raise HousingException(e,sys) from e
 
